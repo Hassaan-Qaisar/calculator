@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <link rel="stylesheet" href="calculator.css" />
+</head>
+<body>
+  <div class="calculator">
+    <h1>Use My Calculator</h1>
+    <!-- Input field to display the calculator operations -->
+    <input type="text" id="operation" placeholder="0"  />
+
+    <!-- First row of buttons -->
+    <div class="button-row">
+      <button class="button" onclick="memoryClear()">MC</button> <!-- Memory Clear -->
+      <button class="button" onclick="appendToDisplay('0')">0</button>
+      <button class="button" onclick="appendToDisplay('1')">1</button>
+      <button class="button" onclick="appendToDisplay('2')">2</button>
+      <button class="button" onclick="appendToDisplay('+')">+</button>
+    </div>
+
+    <!-- Second row of buttons -->
+    <div class="button-row">
+      <button class="button" onclick="memoryAppend()">MS</button> <!-- Memory Store -->
+      <button class="button" onclick="appendToDisplay('3')">3</button>
+      <button class="button" onclick="appendToDisplay('4')">4</button>
+      <button class="button" onclick="appendToDisplay('5')">5</button>
+      <button class="button" onclick="appendToDisplay('-')">-</button>
+    </div>
+
+    <!-- Third row of buttons -->
+    <div class="button-row">
+      <button class="button" onclick="memoryRecall()">MR</button> <!-- Memory Recall -->
+      <button class="button" onclick="appendToDisplay('6')">6</button>
+      <button class="button" onclick="appendToDisplay('7')">7</button>
+      <button class="button" onclick="appendToDisplay('8')">8</button>
+      <button class="button" onclick="appendToDisplay('*')">*</button>
+    </div>
+
+    <!-- Fourth row of buttons -->
+    <div class="button-row">
+      <button class="button" onclick="memoryAdd()">M+</button> <!-- Memory Add -->
+      <button class="button" onclick="appendToDisplay('9')">9</button>
+      <button class="button" onclick="toggleSign()">±</button>
+      <button class="button" onclick="calculateResult('=')">=</button>
+      <button class="button" onclick="appendToDisplay('/')">/</button>
+    </div>
+
+    <!-- Fifth row of buttons -->
+    <div class="button-row">
+      <button class="button" onclick="calculateResult('1/X')">1/X</button>
+      <button class="button" onclick="appendZero('.')">.</button> <!-- Decimal Point -->
+      <button class="button" onclick="calculateResult('x2')">x2</button>
+      <button class="button" onclick="calculateResult('√')">√</button>
+      <button class="button" onclick="clearDisplay()">C</button>
+    </div>
+  </div>
+  <script src="calculator.js"></script>
+</body>
+</html>
